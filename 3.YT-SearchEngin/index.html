@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Youtube Search Engin</title>
+    <title>Youtube Search Engine</title>
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,8 +13,25 @@
 </head>
 
 <body>
-
-
+    <div id="container">
+        <header>
+            <h1>Search<span>Vidz</span></h1>
+            <p>Search Youtube videos</p>
+        </header>
+        <section>
+            <form id="search-form" name="search-form" onsubmit="return search()">
+                <div id="fieldcontainer">
+                    <input type="search" id="query" class="search-field" placeholder="Search Youtube...">
+                    <input type="submit" id="search-btn" name="search-btn" value="">
+                </div>
+            </form>
+            <ul id="results"></ul>
+            <div id="buttons"></div>
+        </section>
+        <footer>
+            <p>Copy Rights Reserved, www.d0tn3t.com</p>
+        </footer>
+    </div>
 </body>
 
 </html>
