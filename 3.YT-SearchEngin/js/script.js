@@ -37,7 +37,7 @@ function search() {
     $("buttons").html("");
 
     //Get form input
-    var q = $("#query").val();
+    q = $("#query").val();
 
     //Run get request on API
     $.get(
@@ -60,6 +60,10 @@ function search() {
                 //Display results
                 $("#results").append(output);
             });
+            var buttons = getButtons(prevPageToken, nextPageToken);
+
+            //Display buttons
+            $("#buttons").append(buttons);
         }
     );
 }
@@ -71,7 +75,7 @@ function getOutput(item) {
     var description = item.snippet.description;
     var thumb = item.snippet.thumbnails.high.url;
     var channelTitle = item.snippet.channelTitle;
-    var videoDate = item.snippet.puplishedAt;
+    var videoDate = item.snippet.publishedAt;
 
     //Build output string
     var output = '<li>' +
@@ -87,4 +91,16 @@ function getOutput(item) {
         '<div class="clearfix"></div>'
     '';
     return output;
+}
+
+// Build Buttons (prev, next)
+function getButtons(prevPageToken, nextPageToken) {
+    if (!prevPageToken) {
+        var btnoutput = '<div class="button-container">' + '<button id="next-button" class="paging-button" data-token="' + nextPageToken + '" data-query="' + q + '" onclick="nextPage();">Next Page</button></div>';
+
+    } else {
+        var btnoutput = '<div class="button-container"><button id="next-button" class="paging-button" data-token="' + prevPageToken + '" data-query="' + q + '" onclick="prevPage();">Next Page</button><button id="next-button" class="paging-button" data-token="' + nextPageToken + '" data-query="' + q + '" onclick="nextPage();">Next Page</button></div>';
+
+    }
+    return btnoutput;
 }
