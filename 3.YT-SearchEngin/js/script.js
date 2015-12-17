@@ -44,6 +44,7 @@ function search() {
         "https://www.googleapis.com/youtube/v3/search", {
             part: 'snippet, id',
             q: q,
+            maxResults: 10,
             type: 'video',
             key: 'AIzaSyAXDUVnD7XMslWKOFB1aZ594z34jbtt46c'
         },
@@ -88,6 +89,8 @@ function nextPage() {
             part: 'snippet, id',
             q: q,
             pageToken: token,
+            maxResults: 10,
+            //order: date,
             type: 'video',
             key: 'AIzaSyAXDUVnD7XMslWKOFB1aZ594z34jbtt46c'
         },
@@ -133,6 +136,7 @@ function prevPage() {
             q: q,
             pageToken: token,
             type: 'video',
+            maxResults: 10,
             key: 'AIzaSyAXDUVnD7XMslWKOFB1aZ594z34jbtt46c'
         },
         function (data) {
