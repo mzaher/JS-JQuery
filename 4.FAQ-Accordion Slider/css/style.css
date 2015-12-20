@@ -15,7 +15,7 @@ a:visited {
 body {
     font-family: Helvetica;
     color: #666;
-    font-size: 16px;
+    font-size: 1em;
     background-color: #f9f9f9;
     line-height: 1.6em;
 }
@@ -25,22 +25,26 @@ li {
 }
 #container {
     width: 60%;
-    margin: 30px auto;
+    margin: 1em auto;
     overflow: auto;
 }
+
+/*
 h1 {
     text-align: center;
     margin-bottom: 20px;
 }
+*/
+
 .title {
-    height: 40px;
+    height: 2em;
     background-color: #6bb170;
     color: white;
     text-align: center;
-    padding-top: 13px;
+    padding-top: 0.5em;
 }
 .faq li {
-    padding: 15px;
+    padding: 0.5em;
 }
 .faq li.q {
     background-color: #eee;
@@ -63,11 +67,7 @@ h1 {
     -ms-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
 }
-.subMenu {
-    margin-top: -10px;
-    padding: 0;
-}
 .subMenu li {
-    line-height: 0.2em !important;
-    padding: 15px;
+    line-height: 0.1em !important;
+    padding: 0.8em;
 }
