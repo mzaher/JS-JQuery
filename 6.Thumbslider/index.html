@@ -2,18 +2,61 @@
 <html>
 
 <head>
-    <title>JQuery Content Slider</title>
+    <title>Thumbslider</title>
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/script.js"></script>
-
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src="./js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
 </head>
 
 <body>
+    <div id="container">
+        <div id="slider">
+            <header>
+                <h3>Thumbslider</h3>
+            </header>
+            <div id="slides">
+                <div class="slide"><img src="img/slides/device-imac.png" width="900" height="200"></div>
+                <div class="slide"><img src="img/slides/device-macbook.png" width="900" height="200"></div>
+                <div class="slide"><img src="img/slides/device-iphone.png" width="900" height="200"></div>
+                <div class="slide"><img src="img/slides/device-ipad.png" width="900" height="200"></div>
+            </div>
 
+            <nav id="menu">
+                <ul>
+                    <li class="sep"></li>
+                    <li class="product">
+                        <a href="">
+                            <img src="img/slides/device-imac-thumb.png" alt="thumbnail">
+                        </a>
+                    </li>
+
+                    <li class="product">
+                        <a href="">
+                            <img src="img/slides/device-macbook-thumb.png" alt="thumbnail">
+                        </a>
+                    </li>
+
+                    <li class="product">
+                        <a href="">
+                            <img src="img/slides/device-iphone-thumb.png" alt="thumbnail">
+                        </a>
+                    </li>
+
+                    <li class="product">
+                        <a href="">
+                            <img src="img/slides/device-ipad-thumb.png" alt="thumbnail">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <footer id="footer">
+        Copyright © 2015 d0tn3t, LLC. All Rights Reserved.
+    </footer>
 
 </body>
 

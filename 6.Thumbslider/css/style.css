@@ -1,1 +1,94 @@
-
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #666;
+    font-size: 1em;
+    background: #f4f4f4;
+    font-family: "Helvetica", sans-serif;
+}
+#container {
+    margin: 2em auto;
+    text-align: center;
+    width: 900px;
+    position: relative;
+}
+a,
+a:visited {
+    color: #0196e3;
+    text-decoration: none;
+    outline: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+p {
+    padding-top: 1em;
+    text-align: center;
+}
+header {
+    background: url(../img/panel.jpg) repeat-x bottom center #ffffff;
+    height: 2em;
+    padding-top: 0.8em;
+    border-bottom: 1px solid #ccc;
+}
+#slider {
+    box-shadow: 0 0 3px #aaaaaa;
+    border-radius: 5px;
+    background: url(../img/panel.jpg) repeat-x bottom center #ffffff;
+    width: 900px;
+    overflow: hidden;
+}
+#slides {
+    height: auto;
+    width: 900px;
+    overflow: hidden;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.slide {
+    float: left !important;
+}
+#menu {
+    height: 2.8em;
+}
+#menu ul {
+    margin: 0;
+    padding: 0;
+}
+#menu li {
+    width: 60px;
+    margin-left: -4px;
+    display: inline-block;
+    list-style: none;
+    height: 45px;
+    overflow: hidden;
+}
+#menu li.active,
+#menu li.active:hover {
+    background: url(../img/active_bg.png) no-repeat;
+}
+#menu li.active {
+    cursor: default;
+}
+#menu .sep {
+    width: 2px;
+    background: url(../img/seperator.png) no-repeat right;
+    margin-right: -2px;
+}
+#menu li a {
+    display: block;
+    background: url(../img/seperator.png) no-repeat right;
+    height: 35px;
+    padding-top: 10px;
+}
+#menu a img {
+    border: none;
+}
+footer {
+    height: 20px;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+}
