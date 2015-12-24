@@ -1,1 +1,23 @@
-
+  body {
+      font-family: Verdana;
+  }
+  h1,
+  h2,
+  h3 {
+      color: darkblue;
+  }
+  .rating-circle {
+      height: 2em;
+      width: 2em;
+      border: .1em solid black;
+      border-radius: 1.1em;
+      display: inline-block;
+      margin: 0;
+      padding: .1em;
+  }
+  .rating-hover {
+      background-color: yellow;
+  }
+  .rating-chosen {
+      background-color: green;
+  }
