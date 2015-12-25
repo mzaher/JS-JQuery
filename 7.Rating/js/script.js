@@ -1,14 +1,23 @@
 $(function () {
-    $('.rating-circle').click(function () {
-        $(this).prevAll().andSelf().addClass('rating-chosen');
-        $(this).nextAll().removeClass('rating-chosen');
-    });
-    $('.rating-circle').hover(function () {
+    var selectedCircle;
+    //Hover Handler
+    $(".rating-circle").hover(function () {
+        $("#rating-container").children().removeClass('rating-chosen');
         $(this).prevAll().andSelf().addClass('rating-hover');
-        $(this).nextAll().removeClass('rating-chosen');
     });
-    $('.rating-circle').mouseleave(function () {
-        $(this).nextAll().removeClass('rating-hover');
-    })
 
+    $(".rating-circle").mouseleave(function () {
+        $(this).removeClass('rating-hover');
+    });
+
+    //Click Handler
+    $(".rating-circle").click(function () {
+        selectedCircle = $(this);
+        $("#rating-container").trigger("mouseleave");
+    });
+
+    $("#rating-container").mouseleave(function () {
+        $("#rating-container").children().removeClass('rating-hover');
+        $(selectedCircle).prevAll().andSelf().addClass('rating-chosen');
+    });
 });
